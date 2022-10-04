@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: lightsteelblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logo {
+    width: 10vw;
+}
+
+header {
+    display: grid;
+    /* need to center all the children here*/
+    justify-items: center;
+}
+
+header > img {
+    width: 10vw;
+}
+
+header > a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: grey;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+}
+
+main > img {
+    width: 50vw;
+}
+
+main > p {
+    text-align: center;
+}
+
+footer {
+    background-color: beige;
+    display: grid;
+    justify-items: center;
+}
+
+footer img {
+    height: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+    main {display: grid;
+    grid-template-columns: 1fr 1fr;}
+    main > img {
+        width: 25vw;
+        align-self: center;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    main > h1 {
+        grid-column: 1/3;
+    }
+    footer > section {
+        display: grid;
+        grid-template-columns: repear(2,1fr);
+    }
+    
+}
